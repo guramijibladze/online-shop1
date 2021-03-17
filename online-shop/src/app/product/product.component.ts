@@ -1,5 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 import { ActivatedRoute,Params } from '@angular/router';
+import { productList } from './product.model';
 
 @Component({
   selector: 'app-product',
@@ -7,7 +8,11 @@ import { ActivatedRoute,Params } from '@angular/router';
   styleUrls: ['./product.component.css']
 })
 export class ProductComponent implements OnInit {
+  @Input() inputVal!: productList[];
 
+  // add(){
+  //   this.inputVal;
+  // }
   constructor(private  route:ActivatedRoute) { }
 
   // goToComponentB(): void {
@@ -18,5 +23,7 @@ export class ProductComponent implements OnInit {
   ngOnInit(): void {
     this.contact1 = this.route.snapshot.params['foo'];
   }
+
+
 
 }

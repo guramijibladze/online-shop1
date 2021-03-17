@@ -8,6 +8,10 @@ import { productList } from '../product/product.model';
   styleUrls: ['./add-product.component.css']
 })
 export class AddProductComponent implements OnInit {
+  products: productList[];
+  selected: string = '';
+  fileToUpload: any = null;
+  sku: number = 0;
 
   constructor(private  route:ActivatedRoute) {
     this.products = [
@@ -19,11 +23,6 @@ export class AddProductComponent implements OnInit {
     // this.about1 = this.route.snapshot.params['foo'];
   }
 
-
-  products: productList[];
-  selected: string = '';
-  fileToUpload: any = null;
-  sku: number = 0;
 
   fileUpload(event: any) :void{
     this.fileToUpload = event.target.value;
