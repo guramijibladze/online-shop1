@@ -14,9 +14,9 @@ export class AddProductComponent implements OnInit {
     ]
    }
 
-  about1:any;
+  // about1:any;
   ngOnInit(): void {
-    this.about1 = this.route.snapshot.params['foo'];
+    // this.about1 = this.route.snapshot.params['foo'];
   }
 
 
@@ -39,7 +39,7 @@ export class AddProductComponent implements OnInit {
     this.sku += 13;
     this.products.push(new productList(productName.value, productPrice.value, 
       this.selected,  this.sku, this.fileToUpload));
-    console.log(this.fileToUpload);
+    console.log(this.products);
     productName.value = "";
     productPrice.value = "";
     return false;

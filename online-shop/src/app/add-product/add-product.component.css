@@ -1,0 +1,19 @@
+.container{
+    /* width: 700px; */
+    height: 350px;
+    background-color: rgb(204, 204, 231);
+}
+
+select{
+    height: 38px;
+    border: 0;
+}
+
+.col-4{
+    margin: auto;
+}
+
+.button{
+    max-width: 100px;
+    margin: auto;
+}
