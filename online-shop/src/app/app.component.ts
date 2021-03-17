@@ -7,4 +7,7 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'online-shop';
+
+  product:any = "Stockhol";
+  list:any = "Malmo";
 }

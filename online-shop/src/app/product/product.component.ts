@@ -9,6 +9,11 @@ export class ProductComponent implements OnInit {
 
   constructor() { }
 
+  // goToComponentB(): void {
+  //   this.stateService.data = {...};
+  //   this.router.navigate(['/b']);
+  // }
+
   ngOnInit(): void {
   }
 
