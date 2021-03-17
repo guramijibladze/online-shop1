@@ -1,1 +1,53 @@
-<p>add-product works!</p>
+
+<div class="container">
+    <form class="">
+      <div class="name text-center">
+        <h6>პროდუქტის აღწერა</h6>
+      </div>
+      <div class="input-group mb-3 ">
+        <!-- <span class="input-group-text" id="basic-addon1">პროდუქტის სახელი</span> -->
+        <input type="text" class="form-control" placeholder="პროდუქტის სახელი" aria-label="Username"
+         aria-describedby="basic-addon1" #productName>
+      </div>
+  
+      <div class="price-type d-flex justify-content-around mb-4">
+        <div class="price">
+          <input type="text" class="form-control" placeholder="შეიყვანეთ ფასი" 
+          aria-label="Username" aria-describedby="basic-addon1" #productPrice>
+        </div>
+        <div class="type" >
+          <select class="form-select border rounded" aria-label="Default select example" 
+          (change)="selctElement($event)">
+            <option selected >აირჩიეთ ტიპი</option>
+            <option value="მობილური ტელეფონი">მობილური ტელეფონი</option>
+            <option value="ლეპტოპი">ლეპტოპი</option>
+            <option value="პერიფერია">პერიფერია</option>
+          </select>
+        </div>
+      </div>
+  
+      <div class="row p-3">
+        <div class="col-8 border rounded">
+          <input type="file" id="myFile" name="filename"
+          (change)="fileUpload($event)">
+        </div>
+        <div class="col-4">
+          <div class="form-check">
+            <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+            <label class="form-check-label" for="flexCheckDefault">
+              Default checkbox
+            </label>
+          </div>
+        </div>
+      </div>
+  
+    </form>
+   
+    <div class="button mt-4">
+      <button type="button" class="btn  btn-primary" (click)="addInfo(productName, productPrice)">ატვირთვა</button>
+    </div>
+  </div>
+  
+  
+  <!-- <app-product-list [inputVal] = "products" ></app-product-list> -->
+  
